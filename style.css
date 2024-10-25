@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1A1313;
+    position: relative;
+    z-index: 2;
+}
+
+body {
+    background-color: black
+    
+}
+nav ul {
+    display: flex;
+    font-size: 20px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.paint-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 25%;
+    filter: blur(8px);
+
+}
+
+.paint {
+    padding-top: 150px;
+    padding-left: 150px;
+    box-shadow: 0 0 20px 0 #fff;
+}
