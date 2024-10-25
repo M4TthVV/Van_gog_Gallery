@@ -66,6 +66,8 @@ h1 {
 
 .paint-content img {
     box-shadow: 0 0 20px 0 #fff;
+    width: 530px;
+    height: 671px;
 }
 
 .content-container {
@@ -80,6 +82,7 @@ h1 {
     font-size: 96px;
     text-align: center;
     padding-bottom: 30px;
+    width: 760px;
 }
 
 .text p {
