@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Jockey One', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 .header-container {
@@ -41,7 +42,7 @@ h1 {
 .paint-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    padding: 200px 0;
 }
 
 .background {
@@ -58,10 +59,10 @@ h1 {
 }
 
 .paint-content {
-    padding-top: 150px;
-    padding-left: 150px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .paint-content img {
@@ -76,18 +77,21 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 620px;
+    margin: 50px 0;
 }
 
 .text h2 {
-    font-size: 96px;
-    text-align: center;
-    padding-bottom: 30px;
+    font-size: 72px;
+    text-align: left;
+    margin-bottom: 30px;
     width: 760px;
+    padding-left: 20px;
+    border-left: solid 10px white;
 }
 
 .text p {
-    font-size: 32px;
-    text-align: left;
+    font-size: 28px;
+    text-align: justify;
 }
 
 .content-container button {
@@ -110,4 +114,20 @@ h1 {
 
 .content-container button:active {
     transform: scale(0.9);
+}
+
+.paint-content.reverse {
+    flex-direction: row-reverse; 
+}
+
+.paint-content.reverse h2 {
+    text-align: right;
+    border-left: none;
+    border-right: solid 10px white;
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+.paint-content.reverse p {
+    text-align-last: right;
 }
