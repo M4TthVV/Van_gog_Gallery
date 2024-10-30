@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="catalogue.css">
+    <title>Catalogue</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <a href="index.html">Van Gogh <br>
+            Gallery
+        </a>
+        <a href="catalogue.html" class="active"> Catalogue</a>
+    </header>
+
+    <div class="pop-up-bg hidden" id="pop-up">
+        <div class="pop-up-container">
+            <button class="close-button" onclick="closePopUp()"></button>
+            <div class="pop-up-content" id="pop-up-content">
+                <h1>Зведная ночь над Роной</h1>
+                <p>В 'Звёздной ночи над Роной' много деталей которые стоит отметить. Картина написана в сентябре 1888 года когда Ван Гог жил в Арле. Это один из периодов когда он активно экспериментировал со светом и цветом. На переднем плане видна пара, гуляющая по песчаному берегу, что добавляет чувство тепла и человеческого присутствия в ночной сцене. Особого внимания заслуживает небо: Ван Гог использовал короткие, интенсивные мазки для создания мерцающих звёзд. Контраст между глубокими синими и блестящими жёлтыми оттенками создаёт ощущение сияния. Это напоминает о технике пуантилизма, но выполнено в более свободной и экспрессивной манере. Река Рона отражает звёзды и огни города, создавая удивительное ощущение глубины и пространства. Световые блики на воде выглядят, как будто они танцуют и переливаются, подчеркивая гармонию между небом и землёй. Картина также демонстрирует уникальный подход Ван Гога к композиции. Вместо строгого следования перспективе, он играет с пространством, создавая ощущения присутствия и бесконечности. Его способность передавать настроение и атмосферу через цвет и свет делает эту работу поистине незабываемой. Ван Гог был мастером передавать не только визуальную красоту, но и своё внутреннее восприятие мира, что делает его работы особенно притягательными.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container-catalogue">
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="index.html"><img src="images/Red_vineyards.jpg" alt="painting"></a>
+                <h2>Красные виноградники в Арле</h2>
+                <button onclick="openPopUp(2)">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/hizhini.jpg" alt="painting">
+                <h2>Хижины</h2>
+                <button onclick="openPopUp(7)">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/zvezdnaynoch.jpg" alt="painting">
+                <h2>Звёздная ночь</h2>
+                <button onclick="openPopUp(4)">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/peyzazhsosnegom.jpg" alt="painting">
+                <h2>Пейзаж со снегом</h2>
+                <button onclick="openPopUp(3)">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/zvezdnaynjchnadronoi.jpg" alt="painting">
+                <h2>Звёздная ночь над Роной</h2>
+                <button onclick="openPopUp(1)">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/peyzazhvovereposledozhdya.jpg" alt="painting">
+                <h2>Пейзаж в Овере после дождя</h2>
+                <button onclick="openPopUp(5)">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/pshenichnoepoleszhatkoi.jpg" alt="painting">
+                <h2>Пшеничное поле с жаткой</h2>
+                <button onclick="openPopUp(6)">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/peyzazhvoliverevdozhd.jpg" alt="painting">
+                <h2>Пейзаж в Овере в дождь</h2>
+                <button onclick="openPopUp(8)">Узнать больше</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

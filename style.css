@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {
@@ -8,11 +8,30 @@
     font-family: 'Jost', sans-serif;
 }
 
+.pop-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+    z-index: 4;
+}
+
+.pop-up.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     background-color: #1A1313;
     position: relative;
     z-index: 2;
@@ -34,9 +53,44 @@ a {
     padding: 10px;
 }
 
-h1 {
+.header-container a {
     color: white;
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 50px;
+}
+
+.header-container a:first-child {
+    border-right: solid 6px white;
+}
+
+.header-container a::after {
+    cursor: pointer;
+    content: '';
+    width: 0%;
+    height: 5px;
+    background-color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.header-container a:hover::after {
+    cursor: pointer;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    display: block;
+}
+
+.header-container a.active::after {
+    cursor: pointer;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    display: block;
 }
 
 .paint-container {
@@ -66,9 +120,16 @@ h1 {
 }
 
 .paint-content img {
+    cursor: pointer;
     box-shadow: 0 0 20px 0 #fff;
     width: 530px;
     height: 671px;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.paint-content img:hover {
+    transform: scale(1.2);
 }
 
 .content-container {
@@ -130,4 +191,63 @@ h1 {
 
 .paint-content.reverse p {
     text-align-last: right;
+}
+
+.pop-up-bg {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-container {
+    width: 80%;
+    height: 80%;
+    background: #d4ccca;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pop-up-content p {
+    font-size: 22px;
+    margin: 40px 110px;
+}
+
+.pop-up-content h1 {
+    text-align: center;
+    font-size: 60px;
+    margin: 40px 0;
+}
+
+.pop-up-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 30px;
+    padding: 20px;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.close-button {
+    background-image: url("images/cross.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: unset;
 }
