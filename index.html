@@ -10,16 +10,21 @@
 </head>
 <body>
     <header class="header-container">
-        <h1>Van Gog <br>
+        <a href="index.html" class="active">Van Gogh <br>
             Gallery
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+        </a>
+        <a href="catalogue.html"> Catalogue</a>
     </header>
+
+    <div class="pop-up-bg hidden" id="pop-up">
+        <div class="pop-up-container">
+            <button class="close-button" onclick="closePopUp()"></button>
+            <div class="pop-up-content" id="pop-up-content">
+                <h1>Зведная ночь над Роной</h1>
+                <p>В 'Звёздной ночи над Роной' много деталей которые стоит отметить. Картина написана в сентябре 1888 года когда Ван Гог жил в Арле. Это один из периодов когда он активно экспериментировал со светом и цветом. На переднем плане видна пара, гуляющая по песчаному берегу, что добавляет чувство тепла и человеческого присутствия в ночной сцене. Особого внимания заслуживает небо: Ван Гог использовал короткие, интенсивные мазки для создания мерцающих звёзд. Контраст между глубокими синими и блестящими жёлтыми оттенками создаёт ощущение сияния. Это напоминает о технике пуантилизма, но выполнено в более свободной и экспрессивной манере. Река Рона отражает звёзды и огни города, создавая удивительное ощущение глубины и пространства. Световые блики на воде выглядят, как будто они танцуют и переливаются, подчеркивая гармонию между небом и землёй. Картина также демонстрирует уникальный подход Ван Гога к композиции. Вместо строгого следования перспективе, он играет с пространством, создавая ощущения присутствия и бесконечности. Его способность передавать настроение и атмосферу через цвет и свет делает эту работу поистине незабываемой. Ван Гог был мастером передавать не только визуальную красоту, но и своё внутреннее восприятие мира, что делает его работы особенно притягательными.</p>
+            </div>
+        </div>
+    </div>
 
     <div class="articles-container">
         <div class="paint-container">
@@ -31,20 +36,20 @@
                         <h2>Звёздная ночь над Роной</h2>
                         <p>В «Звёздной ночи над Роной» много деталей, которые стоит отметить. Картина написана в сентябре 1888 года, когда Ван Гог жил в Арле. Это один из периодов, когда он активно экспериментировал со светом и цветом</p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(1)">Узнать больше</button>
                 </div>
             </div>
         </div>
         <div class="paint-container">
             <div class="background" style="background-image: url(images/Red_vineyards.jpg);"> </div>
-            <div class="paint-content">
+            <div class="paint-content reverse">
                 <img src="images/Red_vineyards.jpg" alt="painting">
                 <div class="content-container">
                     <div class="text">
                         <h2>Красные виноградники в Арле</h2>
                         <p>«Красные виноградники в Арле» Ван Гога, написанная в ноябре 1888 года, удивительно захватывает момент сбора урожая винограда в Арле, небольшом городке на юге Франции</p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(2)">Узнать больше</button>
                 </div>
             </div>
         </div>
@@ -57,20 +62,20 @@
                         <h2>Пейзаж со снегом</h2>
                         <p>Картина «Пейзаж со снегом» Ван Гога, написанная в 1888 году, переносит нас в зимнюю атмосферу сельской местности. Зима накрыла поля и деревья белым покрывалом, создавая чувство тишины и умиротворения.</p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(3)">Узнать больше</button>
                 </div>
             </div>
         </div>
         <div class="paint-container">
             <div class="background" style="background-image: url(images/zvezdnaynoch.jpg);"> </div>
-            <div class="paint-content">
+            <div class="paint-content reverse">
                 <img src="images/zvezdnaynoch.jpg" alt="painting">
                 <div class="content-container">
                     <div class="text">
                         <h2>Звёздная ночь</h2>
                         <p>«Звёздная ночь» Ван Гога — это глубокое и эмоциональное выражение его внутреннего состояния. Когда он писал эту картину, Ван Гог находился в приюте Сен-Реми и переживал трудный период в своей жизни. </p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(4)">Узнать больше</button>
                 </div>
             </div>
         </div>
@@ -83,20 +88,20 @@
                         <h2>Пейзаж в Овере после дождя</h2>
                         <p>«Пейзаж в Овере после дождя» Ван Гога, написанный в июле 1890 года, отражает жизнь и красоту сельской местности Франции. Картина создана в последние месяцы жизни художника, когда он жил в деревне Овер-сюр-Уаз.</p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(5)">Узнать больше</button>
                 </div>
             </div>
         </div>
         <div class="paint-container">
             <div class="background" style="background-image: url(images/pshenichnoepoleszhatkoi.jpg);"> </div>
-            <div class="paint-content">
+            <div class="paint-content reverse">
                 <img src="images/pshenichnoepoleszhatkoi.jpg" alt="painting">
                 <div class="content-container">
                     <div class="text">
                         <h2>Пшеничное поле с жаткой</h2>
                         <p>Картина «Пшеничное поле с жаткой» была написана Ван Гогом в июле 1890 года, когда он жил в деревне Овер-сюр-Уаз во Франции. Эта работа — одна из последних в его творчестве и отражает глубокую связь художника с природой.</p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(6)">Узнать больше</button>
                 </div>
             </div>
         </div>
@@ -109,23 +114,23 @@
                         <h2>Хижины</h2>
                         <p>Картина Винсента Ван Гога "Хижины", созданная в 1890 году, удивительно передает атмосферу сельской жизни во Франции конца XIX века. Ван Гог часто использовал пейзажи, чтобы выразить свою любовь к природе и простой жизни.</p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(7)">Узнать больше</button>
                 </div>
             </div>
         </div>
         <div class="paint-container">
             <div class="background" style="background-image: url(images/peyzazhvoliverevdozhd.jpg);"> </div>
-            <div class="paint-content">
+            <div class="paint-content reverse">
                 <img src="images/peyzazhvoliverevdozhd.jpg" alt="painting">
                 <div class="content-container">
                     <div class="text">
                         <h2>Пейзаж в Овере в дождь</h2>
                         <p>На картине изображены полосы от сильного и ветреного дождя, которые по диагонали пересекают поверхность холста выразительными мазками, вдохновленными гравюрой японского художника Утагавы Хиросигэ «Мост под дождём», которую Ван Гог скопировал в 1887 году. </p>
                     </div>
-                    <button>Узнать больше</button>
+                    <button onclick="openPopUp(8)">Узнать больше</button>
                 </div>
             </div>
         </div>
+    </div>
 </body>
- 
 </html>
